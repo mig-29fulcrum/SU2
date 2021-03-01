@@ -108,7 +108,8 @@ def CFD(config):
     
         the_Command = 'SU2_CFD%s %s' % (quote, tempname)
 
-    the_Command = build_command( the_Command, processes )
+    #the_Command = build_command( the_Command, processes )
+    the_Command = the_Command + ' -t %s' % processes #compiled with omp
     run_command( the_Command )
     
     #os.remove(tempname)
