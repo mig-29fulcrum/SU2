@@ -5970,6 +5970,7 @@ void CConfig::SetOutput(unsigned short val_software, unsigned short val_izone) {
         case SURFACE_MASSFLOW:           cout << "Mass flow rate objective function." << endl; break;
         case SURFACE_MACH:               cout << "Mach number objective function." << endl; break;
         case CUSTOM_OBJFUNC:             cout << "Custom objective function." << endl; break;
+		case SURFACE_MASSFLOW_RATIO:     cout << "Mass flow ratio objective function." << endl; break;
         case REFERENCE_GEOMETRY:         cout << "Target geometry objective function." << endl; break;
         case REFERENCE_NODE:             cout << "Target node displacement objective function." << endl; break;
         case VOLUME_FRACTION:            cout << "Volume fraction objective function." << endl; break;
@@ -7878,6 +7879,7 @@ string CConfig::GetObjFunc_Extension(string val_filename) const {
         case SURFACE_PRESSURE_DROP:       AdjExt = "_dp";       break;
         case SURFACE_MACH:                AdjExt = "_mach";     break;
         case CUSTOM_OBJFUNC:              AdjExt = "_custom";   break;
+		case SURFACE_MASSFLOW_RATIO:      AdjExt = "_mfrratio"; break;
         case KINETIC_ENERGY_LOSS:         AdjExt = "_ke";       break;
         case TOTAL_PRESSURE_LOSS:         AdjExt = "_pl";       break;
         case FLOW_ANGLE_OUT:              AdjExt = "_fao";      break;
